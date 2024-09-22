@@ -69,13 +69,12 @@ public class BigFraction {
   public BigFraction(String str) {
     if (str.contains("/")) {
       String[] nums = str.split("/");
-      int numer = Integer.valueOf(nums[0]) - 48;
-      int denom = Integer.valueOf(nums[2]) - 48;
+      int numer = Integer.valueOf(nums[0]);
+      int denom = Integer.valueOf(nums[1]);
       this.num = BigInteger.valueOf(numer);
       this.denom = BigInteger.valueOf(denom);
-    }
-    else {
-      int numer = Integer.valueOf(str) - 48;
+    } else {
+      int numer = Integer.valueOf(str);
       this.num = BigInteger.valueOf(numer);
       this.denom = BigInteger.valueOf(1);
     }
@@ -136,10 +135,11 @@ public class BigFraction {
 
   /**
    * Simplifies a fraction to it's simplest form
+   * 
    * @param tooComplex A fraction that is too complex
    * @return a new simplified BigFraction
    */
-  public BigFraction simplify(BigFraction tooComplex){
+  public BigFraction simplify(BigFraction tooComplex) {
     BigInteger resultNumerator;
     BigInteger resultDenominator;
     BigInteger gcd = this.num.gcd(this.denom);

@@ -4,16 +4,21 @@ public class BFRegisterSet {
 
   BigFraction[] reglist = new BigFraction[26];
 
-  /** Stores the given value in the specified register.
+  /**
+   * Stores the given value in the specified register.
    * 
    * @param register The register
    * @param val The stored value
-  */
-  public void store(char register, BigFraction val){
+   */
+  public void store(char register, BigFraction val) {
     reglist[register - (int) 'a'] = val;
   }
-  
-  public BigFraction get(char register){
+  /**
+   * Returns the value of a specific register
+   * @param register the register
+   * @return the BigFraction at said register
+   */
+  public BigFraction get(char register) {
     return reglist[register - (int) 'a'];
 
   }

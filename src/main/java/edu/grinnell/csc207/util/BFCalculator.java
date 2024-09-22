@@ -27,9 +27,9 @@ public class BFCalculator {
    * 
    * @param val the added BigFraction
    */
-   public void add(BigFraction val){
+  public void add(BigFraction val) {
     stored = stored.add(val);
-   }
+  }
 
   /**
    * Subtracts val from the stored BigFraction.
